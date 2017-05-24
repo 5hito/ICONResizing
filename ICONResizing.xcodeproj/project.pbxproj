@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		637A95F71ED535940090A5C8 /* DragDropImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 637A95F61ED535940090A5C8 /* DragDropImageView.m */; };
+		637A95FA1ED562B10090A5C8 /* macContents.json in Resources */ = {isa = PBXBuildFile; fileRef = 637A95F91ED562B10090A5C8 /* macContents.json */; };
+		637A95FE1ED564180090A5C8 /* iContents.json in Resources */ = {isa = PBXBuildFile; fileRef = 637A95FD1ED564180090A5C8 /* iContents.json */; };
+		637A96001ED565420090A5C8 /* watchContents.json in Resources */ = {isa = PBXBuildFile; fileRef = 637A95FF1ED565420090A5C8 /* watchContents.json */; };
 		63B25C1A1ECE80540025110A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B25C191ECE80540025110A /* AppDelegate.swift */; };
 		63B25C1C1ECE80540025110A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B25C1B1ECE80540025110A /* ViewController.swift */; };
 		63B25C1E1ECE80540025110A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63B25C1D1ECE80540025110A /* Assets.xcassets */; };
@@ -14,6 +18,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		637A95F41ED535930090A5C8 /* ICONResizing-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ICONResizing-Bridging-Header.h"; sourceTree = "<group>"; };
+		637A95F51ED535940090A5C8 /* DragDropImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragDropImageView.h; sourceTree = "<group>"; };
+		637A95F61ED535940090A5C8 /* DragDropImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DragDropImageView.m; sourceTree = "<group>"; };
+		637A95F91ED562B10090A5C8 /* macContents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = macContents.json; sourceTree = "<group>"; };
+		637A95FD1ED564180090A5C8 /* iContents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = iContents.json; sourceTree = "<group>"; };
+		637A95FF1ED565420090A5C8 /* watchContents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = watchContents.json; sourceTree = "<group>"; };
 		63B25C161ECE80540025110A /* ICONResizing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ICONResizing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63B25C191ECE80540025110A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63B25C1B1ECE80540025110A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -33,6 +43,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		637A95F81ED562980090A5C8 /* Contents */ = {
+			isa = PBXGroup;
+			children = (
+				637A95FD1ED564180090A5C8 /* iContents.json */,
+				637A95F91ED562B10090A5C8 /* macContents.json */,
+				637A95FF1ED565420090A5C8 /* watchContents.json */,
+			);
+			name = Contents;
+			sourceTree = "<group>";
+		};
 		63B25C0D1ECE80540025110A = {
 			isa = PBXGroup;
 			children = (
@@ -52,11 +72,15 @@
 		63B25C181ECE80540025110A /* ICONResizing */ = {
 			isa = PBXGroup;
 			children = (
+				637A95F81ED562980090A5C8 /* Contents */,
 				63B25C191ECE80540025110A /* AppDelegate.swift */,
 				63B25C1B1ECE80540025110A /* ViewController.swift */,
+				637A95F51ED535940090A5C8 /* DragDropImageView.h */,
+				637A95F61ED535940090A5C8 /* DragDropImageView.m */,
 				63B25C1D1ECE80540025110A /* Assets.xcassets */,
 				63B25C1F1ECE80540025110A /* Main.storyboard */,
 				63B25C221ECE80540025110A /* Info.plist */,
+				637A95F41ED535930090A5C8 /* ICONResizing-Bridging-Header.h */,
 			);
 			path = ICONResizing;
 			sourceTree = "<group>";
@@ -94,6 +118,7 @@
 					63B25C151ECE80540025110A = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = T4526N3VMF;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -122,6 +147,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				63B25C1E1ECE80540025110A /* Assets.xcassets in Resources */,
+				637A95FE1ED564180090A5C8 /* iContents.json in Resources */,
+				637A96001ED565420090A5C8 /* watchContents.json in Resources */,
+				637A95FA1ED562B10090A5C8 /* macContents.json in Resources */,
 				63B25C211ECE80540025110A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,6 +163,7 @@
 			files = (
 				63B25C1C1ECE80540025110A /* ViewController.swift in Sources */,
 				63B25C1A1ECE80540025110A /* AppDelegate.swift in Sources */,
+				637A95F71ED535940090A5C8 /* DragDropImageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,12 +275,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = T4526N3VMF;
 				INFOPLIST_FILE = ICONResizing/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kandaart.ICONResizing;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ICONResizing/ICONResizing-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -260,12 +292,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = T4526N3VMF;
 				INFOPLIST_FILE = ICONResizing/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kandaart.ICONResizing;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ICONResizing/ICONResizing-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -289,6 +323,7 @@
 				63B25C271ECE80540025110A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
