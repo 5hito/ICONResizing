@@ -119,7 +119,7 @@ class ViewController: NSViewController {
             url.deleteLastPathComponent()
             url.appendPathComponent("icon_\(i).png")
             do {
-                try resize(image: (iconImageView?.image)!, to: NSMakeSize(CGFloat(i)/2.0, CGFloat(i)/2.0)).saveAsPNG(url: url)
+                try resize(image: (iconImageView?.image)!, to: NSMakeSize(CGFloat(i), CGFloat(i))).saveAsPNG(url: url)
             } catch {
                 warningDialogue(title: "Something went wrong!", text: "Please, try again")
                 success = false
@@ -226,18 +226,24 @@ class ViewController: NSViewController {
 extension NSImage {
     @discardableResult
     func saveAsPNG(url: URL) throws -> Bool {
-        guard let tiffData = self.tiffRepresentation else {
-            throw NSError()
-        }
-        let imageRep = NSBitmapImageRep(data: tiffData)
-        guard let imageData = imageRep?.representation(using: .PNG, properties: [:]) else {
-            throw NSError()
-        }
-        do {
-            try imageData.write(to: url)
+        let bitmap = NSBitmapImageRep(bitmapDataPlanes: nil, pixelsWide: Int(self.size.width), pixelsHigh: Int(self.size.height), bitsPerSample: 8, samplesPerPixel: 4, hasAlpha: true, isPlanar: false, colorSpaceName: NSDeviceRGBColorSpace, bytesPerRow: 0, bitsPerPixel: 0)!
+        bitmap.size = self.size
+        
+        NSGraphicsContext.saveGraphicsState()
+        
+        NSGraphicsContext.setCurrent(NSGraphicsContext(bitmapImageRep: bitmap))
+        self.draw(at: CGPoint.zero, from: NSRect.zero, operation: .sourceOver, fraction: 1.0)
+        NSGraphicsContext.restoreGraphicsState()
+        
+        if let imagePGNData = bitmap.representation(using: .PNG, properties: [NSImageCompressionFactor: 1.0]) {
+            do {
+                try imagePGNData.write(to: url)
+            }catch{
+                return false
+            }
             return true
-        } catch {
-            throw NSError()
+        } else {
+            return false
         }
     }
 }
