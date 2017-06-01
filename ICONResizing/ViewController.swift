@@ -46,6 +46,7 @@ class ViewController: NSViewController {
     
     func initVariables() {
         let _ = self.view.window?.styleMask.remove(.resizable)
+        self.view.window?.backgroundColor = NSColor(calibratedRed: 253/255.0, green: 255/255.0, blue: 244/255.0, alpha: 1)
         imageImported = false
         iconImageView?.register(forDraggedTypes: [ kUTTypePNG as String ])
         self.view.window?.makeFirstResponder(nil)
