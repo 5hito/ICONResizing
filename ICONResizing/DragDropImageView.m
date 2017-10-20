@@ -174,7 +174,7 @@ NSString *kPrivateDragUTI = @"com.yourcompany.cocoadraganddrop";
         if([NSImage canInitWithPasteboard: [sender draggingPasteboard]]) {
             NSImage *newImage = [[NSImage alloc] initWithPasteboard: [sender draggingPasteboard]];
             if(newImage.size.width != 1024 || newImage.size.height != 1024) {
-                return false;
+                //return false;
             }
             [self setImage:newImage];
             imageSeted = true;
